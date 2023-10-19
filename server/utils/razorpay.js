@@ -5,7 +5,4 @@ const instance = new Razorpay({
   key_secret: "REDACTED_CONFIGURE_LOCALLY",
 });
 
-// REDACTED_CONFIGURE_LOCALLY
-// REDACTED_CONFIGURE_LOCALLY
-
-module.exports = instance;
+module.exports = { instance };
