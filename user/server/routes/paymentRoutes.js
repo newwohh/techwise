@@ -8,7 +8,7 @@ paymentRouter.post("/verify", (req, res) => {
   console.log(req.body);
   const { orderCreationId, razorpay_payment_id, razorpay_signature } = req.body;
 
-  const expectedSign = crypto.createHmac("sha256", "REDACTED_CONFIGURE_LOCALLY");
+  const expectedSign = crypto.createHmac("sha256", process.env.RAZORPAY_KEY_SECRET);
   expectedSign.update(`${orderCreationId}|${razorpay_payment_id}`);
 
   if (razorpay_signature === expectedSign) {

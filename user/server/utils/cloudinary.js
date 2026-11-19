@@ -1,9 +1,9 @@
 const cloudinary = require("cloudinary").v2;
 
 cloudinary.config({
-  cloud_name: "REDACTED_CONFIGURE_LOCALLY",
-  api_key: "REDACTED_CONFIGURE_LOCALLY",
-  api_secret: "REDACTED_CONFIGURE_LOCALLY",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 const opts = {

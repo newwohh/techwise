@@ -4,9 +4,9 @@ dotenv.config({ path: "./config/config.env" });
 const { MongoClient } = require("mongodb");
 
 const DBUrl =
-  "REDACTED_CONFIGURE_LOCALLY";
+  process.env.DATABASE_URL;
 
-const dbName = "techwise";
+const dbName = process.env.DATABASE;
 // const dbName = process.env.DATABASE;
 const client = new MongoClient(DBUrl);
 

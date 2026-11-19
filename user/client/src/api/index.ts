@@ -22,7 +22,7 @@ interface Response {
 
 export const initPayment = async (data: Data) => {
   const options = {
-    key: "REDACTED_CONFIGURE_LOCALLY",
+    key: import.meta.env.VITE_RAZORPAY_KEY_ID,
     amount: data.amount.toString(),
     currency: data.currency,
     name: "Techwise",

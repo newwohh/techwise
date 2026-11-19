@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./config/config.env" });
 
 const DBUrl =
-  "REDACTED_CONFIGURE_LOCALLY";
+  process.env.DATABASE_URL;
 
 db = () =>
   mongoose
